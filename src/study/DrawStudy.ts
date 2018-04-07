@@ -1,10 +1,5 @@
 module Study {
-	export class DrawStudy extends egret.DisplayObjectContainer {
-		public constructor() {
-			super();
-			this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
-		}
-
+	export class DrawStudy extends BaseStudy {
 		public onAddToStage() {
 			this.depth();
 		}
@@ -68,24 +63,24 @@ module Study {
 
 		public depth() {
 			var sprcon:egret.Sprite = new egret.Sprite();
-		this.addChild( sprcon );
-		sprcon.x = 10;
-		for(var i:number = 0; i<4; i++)
-		{
-			var spr:egret.Sprite = new egret.Sprite();
-			spr.graphics.beginFill( 0xffffff * Math.random() );
-			spr.graphics.drawRect( 0, 0, 100, 100);
-			spr.graphics.endFill();
-			spr.x = i*20;
-			sprcon.addChild( spr );
-		}
-		var sprNew:egret.Sprite = new egret.Sprite();
-		sprNew.graphics.beginFill( 0xff0000 );
-		sprNew.graphics.drawRect( 0, 0, 300, 150 );
-		sprNew.graphics.endFill();
-		sprNew.x = 10;
-		sprNew.y = 50;
-		sprcon.addChildAt( sprNew, 1 );
+			this.addChild( sprcon );
+			sprcon.x = 10;
+			for(var i:number = 0; i<4; i++)
+			{
+				var spr:egret.Sprite = new egret.Sprite();
+				spr.graphics.beginFill( 0xffffff * Math.random() );
+				spr.graphics.drawRect( 0, 0, 100, 100);
+				spr.graphics.endFill();
+				spr.x = i*20;
+				sprcon.addChild( spr );
+			}
+			var sprNew:egret.Sprite = new egret.Sprite();
+			sprNew.graphics.beginFill( 0xff0000 );
+			sprNew.graphics.drawRect( 0, 0, 300, 150 );
+			sprNew.graphics.endFill();
+			sprNew.x = 10;
+			sprNew.y = 50;
+			sprcon.addChildAt( sprNew, 1 );
 		}
 	}
 }

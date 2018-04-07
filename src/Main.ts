@@ -55,7 +55,7 @@ class Main extends eui.UILayer {
         // this.runGame().catch(e => {
         //     console.log(e);
         // })
-        var study:Study.DrawStudy = new Study.DrawStudy();
+        var study:Study.EventStudy = new Study.EventStudy();
         this.addChild(study);
 
     }

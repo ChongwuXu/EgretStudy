@@ -95,7 +95,7 @@ var Main = (function (_super) {
         // this.runGame().catch(e => {
         //     console.log(e);
         // })
-        var study = new Study.DrawStudy();
+        var study = new Study.EventStudy();
         this.addChild(study);
     };
     Main.prototype.runGame = function () {

@@ -13,9 +13,7 @@ var Study;
     var DrawStudy = (function (_super) {
         __extends(DrawStudy, _super);
         function DrawStudy() {
-            var _this = _super.call(this) || this;
-            _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
-            return _this;
+            return _super !== null && _super.apply(this, arguments) || this;
         }
         DrawStudy.prototype.onAddToStage = function () {
             this.depth();
@@ -96,7 +94,7 @@ var Study;
             sprcon.addChildAt(sprNew, 1);
         };
         return DrawStudy;
-    }(egret.DisplayObjectContainer));
+    }(Study.BaseStudy));
     Study.DrawStudy = DrawStudy;
     __reflect(DrawStudy.prototype, "Study.DrawStudy");
 })(Study || (Study = {}));
